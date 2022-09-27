@@ -12,9 +12,9 @@ public String getMembers(Optional<Product> s) {
 	return s.get().getName();
 }
 
-// 이렇게 parameter로 null이 들어올경우 에러난다. ifPresent도 마찬가지다.
+getMembers(null); // 이렇게 parameter로 null이 들어올경우 에러난다. ifPresent도 마찬가지다.
 // 밑에 2번과 비슷한 경우
-getMembers(null);
+
 ````
 
 #### 2. Optional을 리턴하는 메소드에서 null을 리턴하지 말자. ####
