@@ -1,6 +1,8 @@
 # Optional
 java8 - Optional
 
+<!-- https://docs.google.com/document/d/1UxKM56um1mjGeayxmJmvALM5CDIJC17vx1-sDwoEbSs/edit# -->
+
 ## 주의사항 ##
 1. 리턴값으로만 쓰기를 권장한다. (메소드 매개변수 타입, 맵의 키 타입, 인스턴스 필드 타입으로 쓰지 말자.) 
 2. Optional을 리턴하는 메소드에서 null을 리턴하지 말자.
