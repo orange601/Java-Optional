@@ -4,7 +4,8 @@ java8 - Optional
 <!-- https://docs.google.com/document/d/1UxKM56um1mjGeayxmJmvALM5CDIJC17vx1-sDwoEbSs/edit# -->
 
 ## 주의사항 ##
-1. 리턴값으로만 쓰기를 권장한다. (메소드 매개변수 타입, 맵의 키 타입, 인스턴스 필드 타입으로 쓰지 말자.) 
+
+#### 1. 리턴값으로만 쓰기를 권장한다. (메소드 매개변수 타입, 맵의 키 타입, 인스턴스 필드 타입으로 쓰지 말자.) ####
 ````java
 // 이런식으로 사용금지X
 public String getMembers(Optional<Product> s) {
@@ -15,7 +16,8 @@ public String getMembers(Optional<Product> s) {
 // 밑에 2번과 비슷한 경우
 getMembers(null);
 ````
-2. Optional을 리턴하는 메소드에서 null을 리턴하지 말자.
+
+#### 2. Optional을 리턴하는 메소드에서 null을 리턴하지 말자. ####
 ````java
 // 이런식으로 사용금지X
 public Optional<Product> getMembers() {
@@ -32,14 +34,16 @@ public Optional<Product> getMembers() {
 	return Optional.empty();
 }
 ````
-3. 프리미티브 타입용 Optional을 따로 있다. OptionalInt, OptionalLong,...
+
+#### 3. 프리미티브 타입용 Optional을 따로 있다. OptionalInt, OptionalLong,... ####
 ````java
 // 사용금지(성능이슈) // boxing, unboxing 때문에 성능이슈 발생
 Optional.of(10);
 // 권장사용
 OptionalInt.of(10);
 ````
-4. Collection, Map, Stream Array, Optional은 Opiontal로 감싸지 말 것
+
+#### 4. Collection, Map, Stream Array, Optional은 Opiontal로 감싸지 말 것 ####
 ````java
 // 이미 null을 check하는 옵션이 있다.
 ````
