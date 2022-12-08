@@ -48,6 +48,20 @@ OptionalInt.of(10);
 // 이미 null을 check하는 옵션이 있다.
 ````
 
+#### 5. 예제 ####
+````java
+// delete의 좋은 예시
+@Transactional
+public void deleteById(Long id) {
+	docRepository.findById(id)
+	.map(p -> { 
+		docRepository.delete(p);
+		return p;
+	})
+	.orElseThrow(() -> new IdNotFoundException(id));
+}
+````
+
 ## API ##
 1. Optional 만들기
 	- Optional.of()
