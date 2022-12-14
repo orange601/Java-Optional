@@ -64,9 +64,10 @@ public void deleteById(Long id) {
 
 ## API ##
 1. Optional 만들기
-	- Optional.of()
-	- Optional.ofNullable()
-	- Optional.empty()
+- Optional 객체 생성 3가지
+	1. Optional.of()
+	2. Optional.ofNullable()
+	3. Optional.empty()
 
 2. Optional에 값이 있는지 없는지 확인하기
 	- isPresent()
