@@ -64,21 +64,21 @@ public void deleteById(Long id) {
 
 ## API ##
 1. Optional 객체 생성 3가지
-#### Optional.of() ####
+	#### Optional.of() ####
 
-````java
-// 객체를 담고 있는 Optional 객체를 생성합니다. null이 넘어올 경우, NPE를 던지기 때문에 주의
-Optional<Member> maybeMember = Optional.of(aMember);
-```` 
+	````java
+	// 객체를 담고 있는 Optional 객체를 생성합니다. null이 넘어올 경우, NPE를 던지기 때문에 주의
+	Optional<Member> maybeMember = Optional.of(aMember);
+	```` 
 	
-#### Optional.ofNullable() ####
+	#### Optional.ofNullable() ####
 	````java
 	// null인지 아닌지 확신할 수 없는 객체를 담고 있는 Optional 객체를 생성
 	Optional<Member> maybeMember = Optional.ofNullable(aMember);
 	Optional<Member> maybeNotMember = Optional.ofNullable(null);
 	```` 
 	
-#### Optional.empty() ####
+	#### Optional.empty() ####
 	````java
 	// null을 담고 있는 Optional 객체
 	Optional<Member> maybeMember = Optional.empty();
