@@ -85,7 +85,16 @@ public void deleteById(Long id) {
 	```` 
 
 2. Optional에 값이 있는지 없는지 확인하기
-	- isPresent()
+	#### isPresent() ####
+	- 단지 .get() 하기위해 isPresent()를 사용한다면 .orElseThrow()를 사용하길 권장한다.
+	````java
+	Optional<String> opString = Optional.of("a string in optional");
+
+	if (opString.isPresent()) {
+	    System.out.println("존재합니다.");
+	}
+	````
+	
 	- isEmpty() (Java 11부터 제공)
 
 3. Optional에 있는 값 가져오기
