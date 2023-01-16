@@ -126,5 +126,10 @@ public void deleteById(Long id) {
 
 9. Optional에 들어있는 값 변환하기
 	- Optional map(Function)
+	````java
+	// 타입을 변경할때 주로 사용되고, 타입이 변경되지 않더라도 값을 변경하거나 요소들을 가공할때 사용하기도 한다.
+	Integer test = Optional.of("1").map(Integer::valueOf).orElseThrow(NoSuchElementException::new); // string to integer
+	````
+	
 	- Optional flatMap(Function): Optional 안에 들어있는 인스턴스가 Optional인 경우에 사용하면 편리하다.
 
