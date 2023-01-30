@@ -103,7 +103,16 @@ public void deleteById(Long id) {
 
 4. Optional에 값이 있는 경우에 그 값을 가지고 ~~를 하라.
 	- ifPresent(Consumer)
-	- 예) Spring으로 시작하는 수업이 있으면 id를 출력하라.
+	````java
+	Optional<Member> memberOptional = memberRepository.findById(id);
+	memberOptional.ifPresent(member -> {
+	    if (member.isAdmin()) {
+		member.addAdminPermissions();
+	    } else {
+		member.addDefaultPermissions();
+	    }
+	});
+	````
 
 5. Optional에 값이 있으면 가져오고 없는 경우에 ~~를 리턴하라.
 	- orElse(T)
