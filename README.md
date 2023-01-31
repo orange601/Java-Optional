@@ -101,7 +101,7 @@ public void deleteById(Long id) {
 	- get()
 	- 만약에 비어있는 Optional에서 무언가를 꺼낸다면??
 
-4. ** ifPresent(Consumer) **
+4. **ifPresent(Consumer)**
 	````java
 	Optional<Member> memberOptional = memberRepository.findById(id);
 	memberOptional.ifPresent(member -> {
