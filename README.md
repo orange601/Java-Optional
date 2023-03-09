@@ -1,5 +1,5 @@
 # Optional
-java8 - Optional 효율적으로 사용하기
+java8 - Optional
 
 <!-- https://docs.google.com/document/d/1UxKM56um1mjGeayxmJmvALM5CDIJC17vx1-sDwoEbSs/edit# -->
 
