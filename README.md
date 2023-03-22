@@ -117,7 +117,7 @@ public void deleteById(Long id) {
 	- orElse(T)
 	- 예) JPA로 시작하는 수업이 없다면 비어있는 수업을 리턴하라.
 
-6. Optional에 값이 있으면 가져오고 없는 경우에 ~~를 하라.
+6. **orElseGet**
 	- orElseGet(Supplier)
 	- 예) JPA로 시작하는 수업이 없다면 새로 만들어서 리턴하라.
 
