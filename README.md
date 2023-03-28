@@ -84,8 +84,7 @@ public void deleteById(Long id) {
 	Optional<Member> maybeMember = Optional.empty();
 	```` 
 
-2. Optional에 값이 있는지 없는지 확인하기
-	#### isPresent() ####
+2. **isPresent()**
 	- 단지 .get() 하기위해 isPresent()를 사용한다면 .orElseThrow()를 사용하길 권장한다.
 	````java
 	Optional<String> opString = Optional.of("a string in optional");
@@ -97,7 +96,7 @@ public void deleteById(Long id) {
 	
 	- isEmpty() (Java 11부터 제공)
 
-3. Optional에 있는 값 가져오기
+3. **get()**
 	- get()
 	- 만약에 비어있는 Optional에서 무언가를 꺼낸다면??
 
