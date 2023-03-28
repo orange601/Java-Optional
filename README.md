@@ -97,7 +97,6 @@ public void deleteById(Long id) {
 	- isEmpty() (Java 11부터 제공)
 
 3. **get()**
-	- get()
 	- 만약에 비어있는 Optional에서 무언가를 꺼낸다면??
 
 4. **ifPresent(Consumer)**
