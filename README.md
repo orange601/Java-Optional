@@ -101,14 +101,11 @@ public void deleteById(Long id) {
 
 4. **ifPresent(Consumer)**
 	````java
-	Optional<Member> memberOptional = memberRepository.findById(id);
-	memberOptional.ifPresent(member -> {
-	    if (member.isAdmin()) {
-		member.addAdminPermissions();
-	    } else {
-		member.addDefaultPermissions();
-	    }
-	});
+	memberRepository.findByName(member.getName())
+              .ifPresent(m -> {
+	      	throw new IllegalStateException("이미 존재하는 회원입니다.");
+	      });
+        }
 	````
 
 5. **orElse(T)**
