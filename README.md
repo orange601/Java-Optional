@@ -1,6 +1,8 @@
 # Optional
 java8 - Optional
 
+- Optional을 사용하면 새로 할당하고 객체를 초기화하며 값을 꺼내기 위해 메서드를 호출하는 단계를 더 거치기 때문에 성능이 저하될 수 있다. 
+
 <!-- https://docs.google.com/document/d/1UxKM56um1mjGeayxmJmvALM5CDIJC17vx1-sDwoEbSs/edit# -->
 
 ## 주의사항 ##
